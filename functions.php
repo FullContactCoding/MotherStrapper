@@ -19,10 +19,10 @@ function cwd_wp_bootstrap_scripts_styles() {
 add_action('wp_enqueue_scripts', 'cwd_wp_bootstrap_scripts_styles');
 
     // Nav setup
-add_action( 'after_setup_theme', 'wpt_setup' );
-    if ( ! function_exists( 'wpt_setup' ) ):
-        function wpt_setup() {
-            register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
+add_action( 'after_setup_theme', 'fcc_setup' );
+    if ( ! function_exists( 'fcc_setup' ) ):
+        function fcc_setup() {
+            register_nav_menu( 'primary', __( 'Primary navigation', 'fcc' ) );
         } endif;
  // Register custom navigation walker
     require_once('wp_bootstrap_navwalker.php');
